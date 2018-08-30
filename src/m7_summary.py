@@ -2,12 +2,13 @@
 An exercise that summarizes what you have learned in this Session.
 
 Authors: David Mutchler, Dave Fisher, Vibha Alangar, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
+         their colleagues and Eric Lee.
 """
 ########################################################################
-# TODO: 1.
+# done: 1.
 #   On Line 5 above, replace  PUT_YOUR_NAME_HERE  with your own name.
 ########################################################################
+import rosegraphics as rg
 
 ########################################################################
 # TODO: 2.
@@ -38,3 +39,18 @@ Authors: David Mutchler, Dave Fisher, Vibha Alangar, Amanda Stouder,
 #   As always, COMMIT-and-PUSH when you are done with this module.
 #
 ###############################################################################
+window = rg.TurtleWindow()
+
+
+prinz_eugen = rg.SimpleTurtle('classic')
+prinz_eugen.pen = rg.Pen('Blue', 5)
+prinz_eugen.speed = 1
+
+prinz_eugen.left(90)
+prinz_eugen.forward (200)
+prinz_eugen.pen_up()
+prinz_eugen.go_to(rg.Point(100,-40))
+prinz_eugen.pen_down()
+prinz_eugen.pen = rg.Pen('green', 5)
+prinz_eugen.backward(150)
+window.close_on_mouse_click()
